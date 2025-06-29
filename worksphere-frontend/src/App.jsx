@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      Welcome to the Project on WorkSphere
+      <div className='bg-gray-950 text-white'>
+        Welcome to WorkSphere!
+      </div>
     </>
   )
 }
