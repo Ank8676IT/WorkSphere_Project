@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SignUp = () => {
     return (
@@ -35,7 +36,7 @@ const SignUp = () => {
 
             </div>
 
-            <div className='mt-8 mb-10'>Already on WorkSphere? <span className='text-blue-800 cursor-pointer hover:underline'>Sign in</span></div>
+            <div className='mt-8 mb-10'>Already on WorkSphere? <Link to={'/login'} className='text-blue-800 cursor-pointer hover:underline'>Sign in</Link></div>
         </div>
     )
 }

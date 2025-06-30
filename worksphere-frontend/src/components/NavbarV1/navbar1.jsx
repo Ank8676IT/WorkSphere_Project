@@ -13,7 +13,7 @@ const Navbar1 = () => {
 
             <div className="flex box-border md:gap-4 gap-2 justify-center items-center">
                 <Link to={'/signUp'} className='md:px-4 md:py-2 box-border text-black rounded-3xl text-xl hover:bg-gray-200 cursor-pointer'>Join now</Link>
-                <div className='px-4 py-2 box-border text-white bg-[#7C4585] rounded-3xl text-xl hover:bg-[#6a4ca8] cursor-pointer'>Login</div>
+                <Link to={'/login'} className='px-4 py-2 box-border text-white bg-[#7C4585] rounded-3xl text-xl hover:bg-[#6a4ca8] cursor-pointer'>Login</Link>
             </div>
         </nav>
     )
