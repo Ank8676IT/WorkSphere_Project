@@ -1,3 +1,4 @@
+import { GoogleLogin } from '@react-oauth/google'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +8,7 @@ const Login = () => {
       <div className='w-[85%] md:w-[28%] shadow-xl rounded-sm box p-10'>
         <div className='text-3xl'>Sign In</div>
         <div className='my-5'>
-          Google login BTN
+          <GoogleLogin />
         </div>
 
         <div className='flex items-center gap-2'>
@@ -26,7 +27,7 @@ const Login = () => {
           </div>
 
           <div className='w-full hover:bg-[#9B7EBD] bg-[#7F55B1] text-white py-3 px-4 rounded-xl text-center cursor-pointer my-2'>
-            Login 
+            Login
           </div>
         </div>
 
