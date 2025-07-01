@@ -48,15 +48,15 @@ const Navbar2 = () => {
                         <div className={`text-sm text-gray-500 ${location.pathname==='/myNetwork'?"border-b-3":""}`}>My Network</div>
                     </Link>
                     
-                    <div className='flex flex-col items-center cursor-pointer'>
+                    <Link to={'/resume'} className='flex flex-col items-center cursor-pointer'>
                         <WorkOutlinedIcon style={{ fontSize: 30, color:location.pathname==='/resume'?"black":"gray"}} />
-                        <div className={`text-sm text-gray-500 ${location.pathname==='/resume'?"border-b-3":""}`}>Jobs</div>
-                    </div>
+                        <div className={`text-sm text-gray-500 ${location.pathname==='/resume'?"border-b-3":""}`}>Resume</div>
+                    </Link>
                     
-                    <div className='flex flex-col items-center cursor-pointer'>
+                    <Link to={'/messages'} className='flex flex-col items-center cursor-pointer'>
                         <MessageOutlinedIcon style={{ fontSize: 30, color:location.pathname==='/messages'?"black":"gray"}} />
                         <div className={`text-sm text-gray-500 ${location.pathname==='/messages'?"border-b-3":""}`}>Messages</div>
-                    </div>
+                    </Link>
 
                     <div className='flex flex-col items-center cursor-pointer'>
                        <div><AddAlertOutlinedIcon style={{ fontSize: 30, color:location.pathname==='/notifications'?"black":"gray"}} /> <span className='p-1 rounded-full text-sm bg-red-700 text-white'>2</span> </div>
