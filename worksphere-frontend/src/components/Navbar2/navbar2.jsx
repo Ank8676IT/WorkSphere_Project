@@ -6,7 +6,7 @@ import GroupIcon from '@mui/icons-material/GroupOutlined';
 import WorkOutlinedIcon from '@mui/icons-material/CasesOutlined';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import AddAlertOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Navbar2 = () => {
 
@@ -38,15 +38,15 @@ const Navbar2 = () => {
             </div>
 
             <div className='hidden gap-10 md:flex'>
-                    <div className='flex flex-col items-center cursor-pointer'>
+                    <Link to={'/feeds'} className='flex flex-col items-center cursor-pointer'>
                         <HomeIcon style={{ fontSize: 30, color:location.pathname==='/feeds'?"black":"gray"}} />
                         <div className={`text-sm text-gray-500 ${location.pathname==='/feeds'?"border-b-3":""}`}>Home</div>
-                    </div>
+                    </Link>
 
-                    <div className='flex flex-col items-center cursor-pointer'>
-                        <GroupIcon style={{ fontSize: 30, color:location.pathname==='/mynetwork'?"black":"gray"}} />
-                        <div className={`text-sm text-gray-500 ${location.pathname==='/mynetwork'?"border-b-3":""}`}>My Network</div>
-                    </div>
+                    <Link to={'/myNetwork'} className='flex flex-col items-center cursor-pointer'>
+                        <GroupIcon style={{ fontSize: 30, color:location.pathname==='/myNetwork'?"black":"gray"}} />
+                        <div className={`text-sm text-gray-500 ${location.pathname==='/myNetwork'?"border-b-3":""}`}>My Network</div>
+                    </Link>
                     
                     <div className='flex flex-col items-center cursor-pointer'>
                         <WorkOutlinedIcon style={{ fontSize: 30, color:location.pathname==='/resume'?"black":"gray"}} />

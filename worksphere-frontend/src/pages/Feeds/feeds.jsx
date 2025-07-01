@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '../../components/Card/card'
 import ProfileCard from '../../components/ProfileCard/profileCard'
 import img1 from '../../images/AnkitPic.jpeg'
@@ -6,9 +6,16 @@ import VideoCallIcon from '@mui/icons-material/AddAPhotoOutlined';
 import InsertPhotoIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 import ArticleIcon from '@mui/icons-material/DescriptionOutlined';
 import Advertisment from '../../components/Advertisment/advertisment';
+import Post from '../../components/Post/post';
+import Post2 from '../../components/Post/post2';
+import Post3 from '../../components/Post/post3';
+import Post4 from '../../components/Post/post4'; 
+import Modal from '../../components/Modal/modal';
 
 
 const Feeds = () => {
+
+    const [addPostModal, setAddPostModal] = useState(false);
     return (
         <div className='px-5 xl:px-50 py-9 flex gap-5 w-full mt-5 bg-gray-100'>
             {/* left side */}
@@ -62,115 +69,17 @@ const Feeds = () => {
                     </Card>
                 </div>
 
-                <div>
-                    <Card padding={1}>
-                        <div className='flex gap-2 items-center'>
-                            <img src={img1} alt='Profile Photo' className='rounded-4xl w-13 h-13 border-2 border-white cursor-pointer' />
-                            <div className='w-full border-1 py-3 px-3 rounded-3xl cursor-pointer hover:bg-gray-100'>Start a post</div>
-                        </div>
-
-                        <div className='w-full flex mt-3'>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><VideoCallIcon sx={{ color: "#7F55B1" }} />Video</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><InsertPhotoIcon sx={{ color: "#5EABD6" }} />Photo</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><ArticleIcon sx={{ color: "#F68537" }} />Article</div>
-                        </div>
-                    </Card>
-                </div>
                 
-                <div>
-                    <Card padding={1}>
-                        <div className='flex gap-2 items-center'>
-                            <img src={img1} alt='Profile Photo' className='rounded-4xl w-13 h-13 border-2 border-white cursor-pointer' />
-                            <div className='w-full border-1 py-3 px-3 rounded-3xl cursor-pointer hover:bg-gray-100'>Start a post</div>
-                        </div>
-
-                        <div className='w-full flex mt-3'>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><VideoCallIcon sx={{ color: "#7F55B1" }} />Video</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><InsertPhotoIcon sx={{ color: "#5EABD6" }} />Photo</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><ArticleIcon sx={{ color: "#F68537" }} />Article</div>
-                        </div>
-                    </Card>
-                </div>
-                
-                <div>
-                    <Card padding={1}>
-                        <div className='flex gap-2 items-center'>
-                            <img src={img1} alt='Profile Photo' className='rounded-4xl w-13 h-13 border-2 border-white cursor-pointer' />
-                            <div className='w-full border-1 py-3 px-3 rounded-3xl cursor-pointer hover:bg-gray-100'>Start a post</div>
-                        </div>
-
-                        <div className='w-full flex mt-3'>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><VideoCallIcon sx={{ color: "#7F55B1" }} />Video</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><InsertPhotoIcon sx={{ color: "#5EABD6" }} />Photo</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><ArticleIcon sx={{ color: "#F68537" }} />Article</div>
-                        </div>
-                    </Card>
-                </div>
-
-                <div>
-                    <Card padding={1}>
-                        <div className='flex gap-2 items-center'>
-                            <img src={img1} alt='Profile Photo' className='rounded-4xl w-13 h-13 border-2 border-white cursor-pointer' />
-                            <div className='w-full border-1 py-3 px-3 rounded-3xl cursor-pointer hover:bg-gray-100'>Start a post</div>
-                        </div>
-
-                        <div className='w-full flex mt-3'>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><VideoCallIcon sx={{ color: "#7F55B1" }} />Video</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><InsertPhotoIcon sx={{ color: "#5EABD6" }} />Photo</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><ArticleIcon sx={{ color: "#F68537" }} />Article</div>
-                        </div>
-                    </Card>
-                </div>
-                
-                <div>
-                    <Card padding={1}>
-                        <div className='flex gap-2 items-center'>
-                            <img src={img1} alt='Profile Photo' className='rounded-4xl w-13 h-13 border-2 border-white cursor-pointer' />
-                            <div className='w-full border-1 py-3 px-3 rounded-3xl cursor-pointer hover:bg-gray-100'>Start a post</div>
-                        </div>
-
-                        <div className='w-full flex mt-3'>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><VideoCallIcon sx={{ color: "#7F55B1" }} />Video</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><InsertPhotoIcon sx={{ color: "#5EABD6" }} />Photo</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><ArticleIcon sx={{ color: "#F68537" }} />Article</div>
-                        </div>
-                    </Card>
-                </div>
-                
-                <div>
-                    <Card padding={1}>
-                        <div className='flex gap-2 items-center'>
-                            <img src={img1} alt='Profile Photo' className='rounded-4xl w-13 h-13 border-2 border-white cursor-pointer' />
-                            <div className='w-full border-1 py-3 px-3 rounded-3xl cursor-pointer hover:bg-gray-100'>Start a post</div>
-                        </div>
-
-                        <div className='w-full flex mt-3'>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><VideoCallIcon sx={{ color: "#7F55B1" }} />Video</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><InsertPhotoIcon sx={{ color: "#5EABD6" }} />Photo</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><ArticleIcon sx={{ color: "#F68537" }} />Article</div>
-                        </div>
-                    </Card>
-                </div>
-                
-                <div>
-                    <Card padding={1}>
-                        <div className='flex gap-2 items-center'>
-                            <img src={img1} alt='Profile Photo' className='rounded-4xl w-13 h-13 border-2 border-white cursor-pointer' />
-                            <div className='w-full border-1 py-3 px-3 rounded-3xl cursor-pointer hover:bg-gray-100'>Start a post</div>
-                        </div>
-
-                        <div className='w-full flex mt-3'>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><VideoCallIcon sx={{ color: "#7F55B1" }} />Video</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><InsertPhotoIcon sx={{ color: "#5EABD6" }} />Photo</div>
-                            <div className='flex gap-2 p-2 cursor-pointer justify-center rounded-lg w-[33%] hover:bg-gray-100'><ArticleIcon sx={{ color: "#F68537" }} />Article</div>
-                        </div>
-                    </Card>
-                </div>
-
                 <div className='border-b-1 border-gray-400 w-[100%] my-5 ' />
 
                 <div className='w-full flex flex-col gap-5'>
-                    Post
+                    <Post />
+
+                    <Post2 />
+
+                    <Post3 />
+
+                    <Post4 />
                 </div>
             </div>
 
@@ -187,7 +96,7 @@ const Feeds = () => {
                         </div>
 
                         <div className='my-1'>
-                            <div className='text-lg' style={{ color: '#171717',fontWeight: '500' }}>At least 12 dead in factory blast</div>
+                            <div className='text-lg' style={{ color: '#171717',fontWeight: '500' }}>RCB won IPL Trophy after 18 years</div>
                             <div className='text-xs text-gray-400'>5h ago</div>
                         </div>
 
@@ -218,6 +127,8 @@ const Feeds = () => {
                 </div>
                 
             </div>
+
+            <Modal />
         </div>
     )
 }
