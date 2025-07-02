@@ -17,9 +17,9 @@ const Navbar2 = () => {
     return (
         <div className='bg-white h-13 flex justify-between py-1 px-5 xl:px-50 fixed top-0 w-[100%] z-1000'>
             <div className='flex gap-2 items-center'>
-                <div>
+                <Link to={'/feeds'}>
                     <h3 className="font-bold text-3xl" style={{ color: '#7F55B1' }}>WorkSphere</h3>
-                </div>
+                </Link>
                 <div className='relative'>
                     <input className='searchInput w-70 bg-gray-100 rounded-sm h-10 px-4' placeholder='Search' />
 
@@ -63,10 +63,10 @@ const Navbar2 = () => {
                         <div className={`text-sm text-gray-500 ${location.pathname==='/notifications'?"border-b-3":""}`}>Notifications</div>
                     </div>
 
-                    <div className='flex flex-col items-center cursor-pointer'>
+                    <Link to={`/profile/jghu`} className='flex flex-col items-center cursor-pointer'>
                         <img className='w-8 h-8 rounded-full' src={img1} alt="Ankit Photo" />
                         <div className='text-sm text-gray-500'>Me</div>
-                    </div>
+                    </Link>
             </div>
         </div>
     )
