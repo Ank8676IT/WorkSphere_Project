@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import GoogleLoginComp from '../../components/GoogleLogin/googleLoginComp'
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   return (
     <div className='my-4 py-[50px] md:pl-[120px] px-5 md:flex justify-between'>
         <div className='md:w-[40%]'>
             <div className='text-5xl mx-auto text-gray-500'>Welcome To Your Professional Networking Platform</div>
 
             <div className='my-5 flex mx-auto mt-[20px] bg-white gap-2 rounded-3xl w-[70%] text-black cursor-pointer border-1'>
-                <GoogleLoginComp />
+                <GoogleLoginComp changeLoginValue={props.changeLoginValue}/>
             </div>
 
             <Link to={'/login'} className='flex mx-auto mt-[20px] py-2 px-2 bg-white gap-2 rounded-3xl item-center w-[70%] justify-center text-black hover:bg-gray-100 border-2 cursor-pointer'>Sign in with email</Link>

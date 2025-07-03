@@ -3,6 +3,7 @@ import React,{ useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import {ToastContainer,toast} from 'react-toastify'
 import axios from 'axios'
+import GoogleLoginComp from '../../components/GoogleLogin/googleLoginComp'
  
 const Login = (props) => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const Login = (props) => {
       <div className='w-[85%] md:w-[28%] shadow-xl rounded-sm box p-10'>
         <div className='text-3xl'>Sign In</div>
         <div className='my-5'>
-          <GoogleLogin />
+          <GoogleLoginComp changeLoginValue={props.changeLoginValue}/>
         </div>
 
         <div className='flex items-center gap-2'>
