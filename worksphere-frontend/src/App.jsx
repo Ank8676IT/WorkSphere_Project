@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 import './App.css'
 import Navbar1 from './components/NavbarV1/navbar1'
@@ -14,20 +14,39 @@ import Resume from './pages/Resume/resume'
 import Messages from './pages/Messages/messages'
 import Profile from './pages/Profile/profile'
 
+import axios from 'axios';
+
 function App() {
-  const isLogin = true;
+  const [isLogin,setIsLogin] = useState(false)
+
+  const changeLoginValue = (val)=>{
+    setIsLogin(val)
+  }
+  
+    
+
+  // useEffect(()=>{
+  //   fetchData()
+  // },[])
 
   return (
     <div className='bg-gray-100 w-[100%] h-[100%] box-border'>
       {isLogin?<Navbar2 /> : <Navbar1 />}
       <Routes>
         <Route path='/' element={<LandingPage />} />
+
         <Route path='/signUp' element={<SignUp />} />
-        <Route path='/login' element={<Login />} />
+
+        <Route path='/login' element={<Login changeLoginValue={changeLoginValue}/>} />
+
         <Route path='/feeds' element={<Feeds />} />
+
         <Route path='/myNetwork' element={<MyNetwork />} />
+
         <Route path='/resume' element={<Resume />} />
+
         <Route path='/messages' element={<Messages />} />
+
         <Route path='/profile/:id' element={<Profile />} />
 
       </Routes>
