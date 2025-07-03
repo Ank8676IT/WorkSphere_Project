@@ -7,6 +7,13 @@ import axios from 'axios'
 const SignUp = (props) => {
     const navigate = useNavigate()
 
+    // Handles Google login success
+    const changeLoginValue = (value) => {
+        if (value) {
+            navigate('/feeds');
+        }
+    }
+
     const [registerField,setRegisterField] = useState({email:"",password:"",f_name:""});
 
     const handleInputField = (event,key)=>{
@@ -59,7 +66,7 @@ const SignUp = (props) => {
                     <div className='border-b-1 border-gray-400 w-[45%]'/> <div>or</div><div className='border-b-1 border-gray-400 w-[45%] my-6' />
                 </div>
 
-                <GoogleLogin changeLoginValue={changeLoginValue}/>
+                <GoogleLoginComp changeLoginValue={changeLoginValue}/>
 
             </div>
 
