@@ -1,9 +1,20 @@
 const express = require('express');
-const route = express.Router();
+const router = express.Router();
 const UserController = require('../controller/user')
+const Authentication = require('../authentication/auth');
 
-route.post('/register', UserController.register)
-route.post('/login', UserController.login)
-route.post('/google', UserController.loginThroughGmail)
+router.post('/register', UserController.register)
+router.post('/login', UserController.login)
+router.post('/google', UserController.loginThroughGmail)
 
-module.exports = route;
+router.put('/update', Authentication.auth, UserController.updateUser)
+router.get('/user/:id',UserController.getProfileById)
+router.post('/logout',Authentication.auth,UserController.logout)
+
+router.get('/self',Authentication.auth,(req,res)=>{
+    return res.status(200).json({
+        user:req.user
+    })
+})
+
+module.exports = router;
